@@ -12,7 +12,7 @@ jdk:
   - oraclejdk8
 
 scala:
-  - 2.13.0-M5
+  - 2.13.0-RC1
 
 env:
   global:
@@ -25,9 +25,9 @@ env:
   matrix:
     # The empty SCALAJS_VERSION will only compile for the JVM
     - SCALAJS_VERSION=
-    - SCALAJS_VERSION=0.6.25
+    - SCALAJS_VERSION=0.6.27
 
-script: 
+script:
   # work around https://github.com/travis-ci/travis-ci/issues/9713
   - if [[ $JAVA_HOME = *java-6* ]]; then jdk_switcher use openjdk6; fi
   - java -version
